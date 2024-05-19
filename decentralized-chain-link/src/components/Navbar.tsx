@@ -1,4 +1,4 @@
-'use client';
+'use client'
 import Link from 'next/link';
 import React, { useState } from 'react';
 
@@ -7,7 +7,6 @@ interface LinkSections {
 }
 
 const Navbar: React.FC = () => {
-
   const [hoveredLink, setHoveredLink] = useState<string>('');
 
   const linkSections: LinkSections = {
@@ -26,46 +25,59 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="fixed w-full z-10 bg-transparent mt-5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center h-16 relative">
-          <div className="flex space-x-4">
-            {Object.keys(linkSections).map((link) => (
-              <div key={link} className="relative">
+    <>
+      <nav className="fixed top-0 left-0 right-0 z-10 bg-white mt-0 pt-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-center h-16 relative">
+            <div className="flex space-x-4">
+              <div className="relative">
                 <Link 
-                  href={`/${link.toLowerCase().replace(/\s+/g, '-')}`} 
+                  href="/" 
                   className="text-zinc-950 hover:text-blue-500 px-3 py-2 text-m"
-                  onMouseEnter={() => handleMouseEnter(link)}
-                  onMouseLeave={handleMouseLeave}
                 >
-                  {link.charAt(0).toUpperCase() + link.slice(1)}
+                  Home
                 </Link>
-                {hoveredLink === link && (
-                  <div
-                    className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded shadow-lg w-auto p-4"
+              </div>
+              {Object.keys(linkSections).map((link) => (
+                <div key={link} className="relative">
+                  <Link 
+                    href={`/${link.toLowerCase().replace(/\s+/g, '-')}`} 
+                    className="text-zinc-950 hover:text-blue-500 px-3 py-2 text-m"
                     onMouseEnter={() => handleMouseEnter(link)}
                     onMouseLeave={handleMouseLeave}
                   >
-                    <div className="flex flex-col space-y-2"> 
-                      {linkSections[link].map((subLink, index) => (
-                        <Link 
-                          key={index}
-                          href={`/${subLink.toLowerCase().replace(/\s+/g, '-')}`}
-                          className="text-gray-700 hover:text-blue-500 overflow-hidden whitespace-nowrap text-overflow-ellipsis px-2 py-1"
-                          style={{ maxWidth: '150px' }} 
-                        >
-                          {subLink}
-                        </Link>
-                      ))}
+                    {link.charAt(0).toUpperCase() + link.slice(1)}
+                  </Link>
+                  {hoveredLink === link && (
+                    <div
+                      className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded shadow-lg w-auto p-4"
+                      onMouseEnter={() => handleMouseEnter(link)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      <div className="flex flex-col space-y-2"> 
+                        {linkSections[link].map((subLink, index) => (
+                          <Link 
+                            key={index}
+                            href={`/${subLink.toLowerCase().replace(/\s+/g, '-')}`}
+                            className="text-gray-700 hover:text-blue-500 overflow-hidden whitespace-nowrap text-overflow-ellipsis px-2 py-1"
+                            style={{ maxWidth: '150px' }} 
+                          >
+                            {subLink}
+                          </Link>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
+      </nav>
+      <div className="mt-16">
+        {/* Other content goes here */}
       </div>
-    </nav>
+    </>
   );
 };
 
