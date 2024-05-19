@@ -26,7 +26,7 @@ const Navbar: React.FC = () => {
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-10 bg-white mt-0 pt-10">
+      <nav className="fixed top-0 left-0 right-0 z-10 bg-white mt-0 pt-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-center h-16 relative">
             <div className="flex space-x-4">
@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
                   </Link>
                   {hoveredLink === link && (
                     <div
-                      className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded shadow-lg w-auto p-4"
+                      className="absolute left-1/2 transform -translate-x-1/2 mt-2 bg-white border border-zinc-300 rounded shadow-lg w-auto p-4"
                       onMouseEnter={() => handleMouseEnter(link)}
                       onMouseLeave={handleMouseLeave}
                     >
