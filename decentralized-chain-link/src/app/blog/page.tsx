@@ -1,347 +1,29 @@
 'use client'
 import React, { useState, useEffect } from 'react';
+import GetAllPost, { IPOST } from './api/Post';
 
-const posts = [
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  },
-  {
-    id: 1,
-    title: 'First Blog Postaaaaaaaaaaaaaaaa',
-    content: 'This is the content of the first blog post.',
-    upvotes: 0,
-    downvotes: 0,
-    comments: 0,
-    createdAt: new Date('2024-05-20T08:00:00Z')
-  }
-];
 
 function Blog() {
-  const [postVotes, setPostVotes] = useState(posts);
+  const [post, setPost] = useState<IPOST[]>([]);
 
   useEffect(() => {
     const interval = setInterval(updateTimers, 1000); 
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(()=> {
+    const allPost = async () => {
+      setPost(await GetAllPost())
+    }
+    allPost()
+  }, )
+
   const updateTimers = () => {
-    setPostVotes(prevState =>
+    setPost(prevState =>
       prevState.map(post => {
         return {
           ...post,
-          timer: calculateTimer(post.createdAt)
+          //timer: calculateTimer(post.postedOn)
         };
       })
     );
@@ -367,14 +49,15 @@ function Blog() {
   };
 
   const handleVote = (postId: number, type: string) => {
-    setPostVotes(prevState =>
+    setPost(prevState =>
       prevState.map(post => {
         if (post.id === postId) {
-          return {
-            ...post,
-            upvotes: type === 'upvote' ? post.upvotes + 1 : post.upvotes,
-            downvotes: type === 'downvote' ? post.downvotes + 1 : post.downvotes,
-          };
+          if(type === 'upvote') {
+            post.votes = post.votes + 1
+          }
+          else {
+            post.votes = post.votes - 1
+          }
         }
         return post;
       })
@@ -384,13 +67,13 @@ function Blog() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {postVotes.map(post => (
+        {post.length > 0 ? post.map(post => (
           <div key={post.id} className="bg-white rounded-lg shadow-md overflow-hidden">
             <img src={`https://source.unsplash.com/800x600/?${post.title}`} alt={post.title} className="w-full h-48 object-cover" />
             <div className="p-6">
               <div className="flex items-center justify-between">
                 <h2 className="text-xl font-semibold mb-2">{post.title.length > 15 ? post.title.substring(0, 17) + '...' : post.title}</h2>
-                <span className="text-sm text-gray-500">{post.timer}</span>
+                <span className="text-sm text-gray-500">{post.postedOn.toString()}</span>
               </div>
               <p className="text-gray-600 mt-2">{post.content.length > 40 ? post.content.substring(0, 40) + '...' : post.content}</p>
               <div className="flex items-center justify-between mt-4 pt-3">
@@ -398,7 +81,7 @@ function Blog() {
                   <button onClick={() => handleVote(post.id, 'upvote')} className="mr-2 flex items-center">
                     👍
                   </button>
-                  <div className='mr-2'>{post.upvotes - post.downvotes}</div>
+                  <div className='mr-2'>{0}</div>
                   <button onClick={() => handleVote(post.id, 'downvote')} className="mr-2 flex items-center">
                     👎
                   </button>
@@ -407,12 +90,12 @@ function Blog() {
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1 text-gray-500" viewBox="0 0 20 20" fill="currentColor">
                     <path fillRule="evenodd" d="M10 2c-4.4183 0-8 3.5817-8 8s3.5817 8 8 8 8-3.5817 8-8-3.5817-8-8-8zm-3 9a1 1 0 00-1 1v1a1 1 0 001 1h6a1 1 0 001-1v-1a1 1 0 00-1-1H7z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-gray-500 px-1">{post.comments}</span>
+                  <span className="text-sm text-gray-500 px-1">{Number(0)}</span>
                 </div>
               </div>
             </div>
           </div>
-        ))}
+        )) : "No post available"}
       </div>
     </div>
   );
