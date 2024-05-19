@@ -11,6 +11,321 @@ const posts = [
     comments: 0,
     createdAt: new Date('2024-05-20T08:00:00Z')
   },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  },
+  {
+    id: 1,
+    title: 'First Blog Postaaaaaaaaaaaaaaaa',
+    content: 'This is the content of the first blog post.',
+    upvotes: 0,
+    downvotes: 0,
+    comments: 0,
+    createdAt: new Date('2024-05-20T08:00:00Z')
+  }
 ];
 
 function Blog() {
