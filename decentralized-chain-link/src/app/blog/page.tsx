@@ -23,7 +23,6 @@ function Blog() {
       prevState.map(post => {
         return {
           ...post,
-          //timer: calculateTimer(post.postedOn)
         };
       })
     );
@@ -95,7 +94,7 @@ function Blog() {
               </div>
             </div>
           </div>
-        )) : "No post available"}
+        )) : <h1>No Posts Available</h1>}
       </div>
     </div>
   );

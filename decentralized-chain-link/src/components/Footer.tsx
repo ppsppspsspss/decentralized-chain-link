@@ -12,7 +12,7 @@ function Footer() {
           </video>
         ))}
       </div>
-      <footer className="bg-zinc-950 text-white py-28 mt-auto relative z-10">
+      <footer className="bg-zinc-950 text-white py-28 px-8 mt-auto relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row justify-between">
             <div className="mb-4 md:mb-0">
